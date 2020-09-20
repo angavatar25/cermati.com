@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('.button_ok').click(function() {
         // $('.page__header').css("margin-top", "-85px");
-        $('.page__header').addClass('disappear_notification')
+        // $('.page__header').addClass('disappear_notification')
+        $('.notification_panel').css('margin-top', -($('.notification_panel').innerHeight()));
     })
     
     $('#closeButton').click(function() {
