@@ -142,17 +142,17 @@ body {
   bottom: 0;
   left: 0;
   z-index: 2;
-  margin-left: -1500px;
+  margin-bottom: -1500px;
   transition: margin .6s ease-in-out; }
   @media screen and (min-width: 768px) {
     .newsletter__panel {
       width: 640px;
       max-width: 640px; } }
   .newsletter__panel.appear {
-    margin-left: 0; }
+    margin-bottom: 0; }
   .newsletter__panel.disappear {
     margin-left: 0;
-    margin-bottom: -1000px;
+    margin-bottom: -1500px;
     transition: margin .6s ease-in-out; }
   .newsletter__panel .close_icon-container {
     text-align: right; }

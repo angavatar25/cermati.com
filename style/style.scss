@@ -168,18 +168,18 @@ body {
     bottom: 0;
     left: 0;
     z-index: 2;
-    margin-left: -1500px;
+    margin-bottom: -1500px;
     transition: margin .6s ease-in-out;
     @media screen and (min-width: 768px) {
         width: 640px;
         max-width: 640px;
     }
     &.appear {
-        margin-left: 0;
+        margin-bottom: 0;
     }
     &.disappear {
         margin-left: 0;
-        margin-bottom: -1000px;
+        margin-bottom: -1500px;
         transition: margin .6s ease-in-out;
     }
     .close_icon-container {
