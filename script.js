@@ -1,7 +1,5 @@
 $(document).ready(function() {
     $('.button_ok').click(function() {
-        // $('.page__header').css("margin-top", "-85px");
-        // $('.page__header').addClass('disappear_notification')
         $('.notification_panel').css('margin-top', -($('.notification_panel').innerHeight()));
     })
     
@@ -14,6 +12,7 @@ $(document).ready(function() {
 
     var currentScrollTop = 0, previousScrollDir = true;
     $(window).scroll(function() {
+        var bodyHeight = $('body').height();
         var scrollTop = $(this).scrollTop() > 50;
         var toggleHidden = localStorage.getItem('hiddenNavigation');
 
@@ -35,7 +34,7 @@ $(document).ready(function() {
               previousScrollDir = true;
             }
         } else {
-            if (previousScrollDir) {
+            if (previousScrollDir && $(this).scrollTop() > bodyHeight/3) {
               previousScrollDir = false;
               $('.newsletter__panel').addClass('appear');
             }
