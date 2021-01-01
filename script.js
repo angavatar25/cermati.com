@@ -1,8 +1,13 @@
 $(document).ready(function() {
     $('.button_ok').click(function() {
         $('.notification_panel').css('margin-top', -($('.notification_panel').innerHeight()));
+        // $('.notification_panel').css('height', 0);
+        // $('.notification_panel').css('padding', 0);
+        $('.content').css('padding-top', 0);
     })
-    
+    var notification_height = $('.notification_panel').height();
+    $('.content').css('padding-top', notification_height + 20);
+
     $('#closeButton').click(function() {
         $('.newsletter__panel').removeClass('appear')
         localStorage.setItem('hiddenNavigation', 'disappear');

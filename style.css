@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  transition: margin-top .5s;
+  font-family: 'Roboto', 'Arial'; }
+
+.notification_panel {
+  background-color: #e5e5e5;
+  padding: 20px;
+  z-index: 1;
+  transition: 0.5s;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: block; }
+  .notification_panel.disappear {
+    display: none; }
+  .notification_panel .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 720px;
+    margin: auto; }
+    @media screen and (max-width: 768px) {
+      .notification_panel .wrapper {
+        display: block;
+        font-size: calc(0.5em + 0.5em); } }
+  .notification_panel span a {
+    text-decoration: none;
+    color: #007bc1; }
+  .notification_panel button {
+    background-color: #007bc1;
+    color: #fff;
+    border-color: transparent;
+    line-height: 30px;
+    border-radius: 5px;
+    width: 80px;
+    height: 100%; }
+    @media screen and (max-width: 768px) {
+      .notification_panel button {
+        margin-top: 1em; } }
+
+.content {
+  transition: margin-top .5s; }
+  .content .page__header {
+    background-image: url("./assets/background.jpg");
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: margin-top .5s; }
+    .content .page__header::after {
+      content: "";
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: inline-block;
+      position: absolute;
+      background: -webkit-gradient(linear, left top, right top, from(#004a75), color-stop(40%, #004a75), color-stop(70%, #004a75), to(#004a75));
+      background: linear-gradient(90deg, #004a75, #004a75 90%, #004a75 70%, #004a75); }
+    .content .page__header .page__header-content {
+      padding: 20px;
+      color: #fff;
+      position: relative;
+      z-index: 1; }
+      .content .page__header .page__header-content .logo__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: inherit; }
+      .content .page__header .page__header-content .logo-image {
+        width: calc(5vw + 0.5vw); }
+        @media screen and (max-width: 768px) {
+          .content .page__header .page__header-content .logo-image {
+            width: calc(12vw + 0.2vw); } }
+      .content .page__header .page__header-content .page__header-text {
+        text-align: center;
+        margin: 90px  auto; }
+        .content .page__header .page__header-content .page__header-text .button__container {
+          margin-top: 30px; }
+          .content .page__header .page__header-content .page__header-text .button__container a {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            transition: 0.2s;
+            text-transform: uppercase; }
+            .content .page__header .page__header-content .page__header-text .button__container a:hover {
+              background-color: #fff;
+              color: #007bc1; }
+  .content .highlight__panel {
+    background-color: #e5e5e5;
+    padding: 50px 0; }
+    .content .highlight__panel .highlight__text {
+      text-align: center; }
+      .content .highlight__panel .highlight__text p {
+        margin: auto;
+        width: calc(20em + 4em);
+        line-height: 25px;
+        padding: 15px 0; }
+        @media screen and (min-width: 768px) {
+          .content .highlight__panel .highlight__text p {
+            width: calc(30em + 4em); } }
+    .content .highlight__panel .highlight__cards {
+      margin: 20px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(1, 2fr);
+      grid-gap: 10px; }
+      @media screen and (min-width: 481px) and (max-width: 960px) {
+        .content .highlight__panel .highlight__cards {
+          grid-template-columns: repeat(2, 1fr); } }
+      @media screen and (min-width: 961px) {
+        .content .highlight__panel .highlight__cards {
+          grid-template-columns: repeat(3, 2fr); } }
+      @media screen and (min-width: 1920px) {
+        .content .highlight__panel .highlight__cards {
+          width: 1366px;
+          margin: auto; } }
+      .content .highlight__panel .highlight__cards .card_container {
+        padding: 20px;
+        border: 1px solid gray;
+        margin-bottom: 10px; }
+        .content .highlight__panel .highlight__cards .card_container .card_title {
+          display: flex;
+          justify-content: space-between;
+          font-size: 25px; }
+          .content .highlight__panel .highlight__cards .card_container .card_title i {
+            color: gray; }
+  .content footer {
+    background-color: #004a75;
+    color: #fff;
+    padding: 35px; }
+    .content footer p {
+      margin: 0;
+      text-align: center; }
+      @media screen and (max-width: 768px) {
+        .content footer p {
+          font-size: calc(12px + 0.5px); } }
+
+.newsletter__panel {
+  background-color: #007bc1;
+  width: inherit;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin-bottom: -1500px;
+  transition: margin .6s ease-in-out; }
+  @media screen and (min-width: 768px) {
+    .newsletter__panel {
+      width: 640px;
+      max-width: 640px; } }
+  .newsletter__panel.appear {
+    margin-bottom: 0; }
+  .newsletter__panel.disappear {
+    margin-left: 0;
+    margin-bottom: -1500px;
+    transition: margin .6s ease-in-out; }
+  .newsletter__panel .close_icon-container {
+    text-align: right; }
+  .newsletter__panel p {
+    font-size: calc(12px + 0.5px);
+    line-height: 20px; }
+    @media screen and (min-width: 768px) {
+      .newsletter__panel p {
+        font-size: calc(16px + 0.5px); } }
+  .newsletter__panel .email_textbox {
+    margin-top: 10px;
+    display: grid;
+    width: inherit; }
+    @media screen and (min-width: 768px) {
+      .newsletter__panel .email_textbox {
+        display: flex;
+        justify-content: space-between;
+        max-width: 640px;
+        width: 100%; } }
+    .newsletter__panel .email_textbox input {
+      margin-bottom: 10px;
+      width: inherit;
+      padding: 5px; }
+      @media screen and (min-width: 768px) {
+        .newsletter__panel .email_textbox input {
+          margin-bottom: 0;
+          margin-right: 10px;
+          width: 100%; } }
+    .newsletter__panel .email_textbox button {
+      padding: 8px;
+      background-color: #ffc100;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      width: 40%;
+      width: inherit; }
+      @media screen and (min-width: 768px) {
+        .newsletter__panel .email_textbox button {
+          width: 40%; } }
+
+/*# sourceMappingURL=style.css.map */
